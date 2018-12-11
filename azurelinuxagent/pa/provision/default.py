@@ -225,7 +225,7 @@ class ProvisionHandler(object):
             logger.info("Publish hostname [{0}]".format(ovfenv.hostname))
             self.osutil.publish_hostname(ovfenv.hostname)
 
-            self.config_user_account(ovfenv)
+            # self.config_user_account(ovfenv)
 
             self.save_customdata(ovfenv)
 
