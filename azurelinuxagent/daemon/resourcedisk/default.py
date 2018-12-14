@@ -126,7 +126,7 @@ class ResourceDiskHandler(object):
             force_option = 'f'
         more_options = ''
         if self.fs == 'ext4':
-            more_options = '-E lazy_itable_init'
+            more_options = '-E lazy_itable_init=1,lazy_journal_init=1'
         mkfs_string = "mkfs.{0} -{2} {3} {1}".format(
             self.fs, partition, force_option, more_options)
 
